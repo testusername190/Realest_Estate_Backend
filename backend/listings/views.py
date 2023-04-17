@@ -5,12 +5,17 @@ from rest_framework import permissions
 from .models import Listing
 from .serializers import ListingSerializer, listingDetailSerializer
 from datetime import datetime, timezone, timedelta
+import logging
+
+logger = logging.getLogger("django")
 
 
 #Defining our views for the Listings APP.
 
 # ListAPIView will give us the GET Api call for all the listings in the DB orderedby listed date and fileterd by is published field.
 class ListingsView(ListAPIView):
+    logger.info("\n Inside the ListingsView API of listings App. Here we are getting all the data filtered by list date and ispublished value..")
+
     queryset = Listing.objects.order_by('-list_date').filter(is_published=True)
     permission_classes = (permissions.AllowAny, )
     serializer_class = ListingSerializer
@@ -19,12 +24,16 @@ class ListingsView(ListAPIView):
 # RetrieveAPIView will give us the GET Api call for a particular listings from the DB fileterd by the slug field orderedby listed date and fileterd by is published field.
 # We would need the authentication Token to access this View through the API call.
 class ListingView(RetrieveAPIView):
+    logger.info("\n inside the ListingView API of listings App. Here we are getting the info of a particular View using id and JWT token is madatory here..")
+
     queryset = Listing.objects.order_by('-list_date').filter(is_published=True)
     serializer_class = listingDetailSerializer
     lookup_field = 'slug'
 
 # APIView gives us the API creation to create our Custom APIs. We can create our Custom API like CRUD operation as we see fit.
 class SearchView(APIView):
+    logger.info("\n Inside the SearchView API of listings App. Here we are getting the search field values from the frontend Form and using it to retrieve data from the backend. This is done in the home page itself.")
+
     permission_classes = (permissions.AllowAny, )
     serializer_class = ListingSerializer
 

@@ -1,0 +1,37 @@
+INFO 2023-04-17 18:47:11,758 django.utils.autoreload MainThread 140483593245120 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 8993 Watching for file changes with StatReloader
+INFO 2023-04-17 18:48:02,564 django Thread-1 (process_request_thread) 140483526170176 views views.py 18 django post 8993 
+ Sending data from the Frontend using a Form to the backend to send email..
+INFO 2023-04-17 18:48:12,774 django Thread-1 (process_request_thread) 140483526170176 views views.py 37 django post 8993 
+ Email has been successfully sent!!
+INFO 2023-04-17 18:48:12,777 django.server Thread-1 (process_request_thread) 140483526170176 basehttp basehttp.py 187 django.server log_message 8993 "POST /api/contacts/ HTTP/1.1" 200 39
+INFO 2023-04-17 19:04:54,757 django.utils.autoreload MainThread 140350673670592 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 11162 Watching for file changes with StatReloader
+INFO 2023-04-17 19:04:55,185 django MainThread 140350673670592 views views.py 20 django SignupView 11162 
+ Inside the SignupView API of accounts APP. Here we are creating an account of a user. JWT token not needed. 
+INFO 2023-04-17 19:04:55,187 django MainThread 140350673670592 views views.py 16 django RealtorListView 11162 
+ Inside the RealtorListView API of realtor App. Here we are getting all the realtors from DB..
+INFO 2023-04-17 19:04:55,188 django MainThread 140350673670592 views views.py 24 django RealtorView 11162 
+ Inside the RealtorView API of realtor App. Here we are a particular realtors from DB based on its PK..
+INFO 2023-04-17 19:04:55,188 django MainThread 140350673670592 views views.py 30 django TopSellerView 11162 
+ Inside the TopSellerView API of realtor App. Here we are getting all the realtors who are topsellers..
+INFO 2023-04-17 19:04:55,194 django MainThread 140350673670592 views views.py 17 django ListingsView 11162 
+ Inside the ListingsView API of listings App. Here we are getting all the data filtered by list date and ispublished value..
+INFO 2023-04-17 19:04:55,195 django MainThread 140350673670592 views views.py 27 django ListingView 11162 
+ inside the ListingView API of listings App. Here we are getting the info of a particular View using id and JWT token is madatory here..
+INFO 2023-04-17 19:04:55,195 django MainThread 140350673670592 views views.py 35 django SearchView 11162 
+ Inside the SearchView API of listings App. Here we are getting the search field values from the frontend Form and using it to retrieve data from the backend. This is done in the home page itself.
+INFO 2023-04-17 19:05:44,419 django.server Thread-1 (process_request_thread) 140350538643008 basehttp basehttp.py 187 django.server log_message 11162 "GET /api/listings/ HTTP/1.1" 200 399
+WARNING 2023-04-17 19:05:56,989 django.request Thread-1 (process_request_thread) 140350538643008 log log.py 241 django.request log_response 11162 Unauthorized: /api/listings/Shyama-Prasad-Mukherjee-Rd
+WARNING 2023-04-17 19:05:56,990 django.server Thread-1 (process_request_thread) 140350538643008 basehttp basehttp.py 187 django.server log_message 11162 "GET /api/listings/Shyama-Prasad-Mukherjee-Rd HTTP/1.1" 401 183
+INFO 2023-04-17 19:06:05,141 django.server Thread-2 (process_request_thread) 140350529201728 basehttp basehttp.py 187 django.server log_message 11162 "GET /api/realtors/ HTTP/1.1" 200 743
+WARNING 2023-04-17 19:06:12,428 django.request Thread-2 (process_request_thread) 140350529201728 log log.py 241 django.request log_response 11162 Unauthorized: /api/realtors/3
+WARNING 2023-04-17 19:06:12,429 django.server Thread-2 (process_request_thread) 140350529201728 basehttp basehttp.py 187 django.server log_message 11162 "GET /api/realtors/3 HTTP/1.1" 401 183
+INFO 2023-04-17 19:06:19,117 django.server Thread-2 (process_request_thread) 140350529201728 basehttp basehttp.py 187 django.server log_message 11162 "GET /api/realtors/topseller HTTP/1.1" 200 506
+ERROR 2023-04-17 19:06:53,711 django Thread-1 (process_request_thread) 140350538643008 views views.py 52 django post 11162 
+ Inside the post function of SignupView API of accounts APP. Entered Passwords didnot match.
+INFO 2023-04-17 19:06:53,712 django.server Thread-1 (process_request_thread) 140350538643008 basehttp basehttp.py 187 django.server log_message 11162 "POST /api/accounts/signup HTTP/1.1" 200 34
+ERROR 2023-04-17 19:06:58,518 django Thread-1 (process_request_thread) 140350538643008 views views.py 35 django post 11162 
+ Inside the post function of SignupView API of accounts APP. Passwords have matched but the email already exists. 
+INFO 2023-04-17 19:06:58,519 django.server Thread-1 (process_request_thread) 140350538643008 basehttp basehttp.py 187 django.server log_message 11162 "POST /api/accounts/signup HTTP/1.1" 200 32
+INFO 2023-04-17 19:07:05,091 django Thread-1 (process_request_thread) 140350538643008 views views.py 48 django post 11162 
+ User creation successfull!! 
+INFO 2023-04-17 19:07:05,092 django.server Thread-1 (process_request_thread) 140350538643008 basehttp basehttp.py 187 django.server log_message 11162 "POST /api/accounts/signup HTTP/1.1" 200 39

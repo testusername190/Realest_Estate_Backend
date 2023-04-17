@@ -1,0 +1,4 @@
+WARNING 2023-04-17 19:05:56,989 django.request Thread-1 (process_request_thread) 140350538643008 log log.py 241 django.request log_response 11162 Unauthorized: /api/listings/Shyama-Prasad-Mukherjee-Rd
+WARNING 2023-04-17 19:05:56,990 django.server Thread-1 (process_request_thread) 140350538643008 basehttp basehttp.py 187 django.server log_message 11162 "GET /api/listings/Shyama-Prasad-Mukherjee-Rd HTTP/1.1" 401 183
+WARNING 2023-04-17 19:06:12,428 django.request Thread-2 (process_request_thread) 140350529201728 log log.py 241 django.request log_response 11162 Unauthorized: /api/realtors/3
+WARNING 2023-04-17 19:06:12,429 django.server Thread-2 (process_request_thread) 140350529201728 basehttp basehttp.py 187 django.server log_message 11162 "GET /api/realtors/3 HTTP/1.1" 401 183
