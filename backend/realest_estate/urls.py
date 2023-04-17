@@ -22,12 +22,15 @@ from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView
 
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),    # API for the obtaining JWT token during login session.
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/accounts/', include('accounts.urls')),
-    path('admin/', admin.site.urls),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('api/accounts/', include('accounts.urls')),                                # API for the Account/User creation, SignUp Page
+    path('api/realtors/', include('realtors.urls')),                                # API for the realtors page (Real Estate Agents) 
+    path('api/listings/', include('listings.urls')),                                # API for the listings page (Listings posted by Agents) 
+    path('api/contacts/', include('contacts.urls')),                                # API for the contacts page (Contacts posted by Users) 
+    path('admin/', admin.site.urls),                                                # API for the admin page (Super User)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)                   # For accessing the media folder through the API
 
-urlpatterns += [re_path(r'^.*', TemplateView.as_view(template_name='index.html'))]
+urlpatterns += [re_path(r'^.*', TemplateView.as_view(template_name='index.html'))]  
 
 

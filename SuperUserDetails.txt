@@ -1,0 +1,7 @@
+superuser:
+
+email: subham@gmail.com
+Name : subham
+Password: 123 
+
+Login Using Email and Password
