@@ -1095,3 +1095,59 @@ WARNING 2023-04-19 07:08:16,348 django.server Thread-1 (process_request_thread) 
 WARNING 2023-04-19 07:08:29,746 django.request Thread-1 (process_request_thread) 139744607385152 log log.py 241 django.request log_response 15673 Bad Request: /api/contacts/
 WARNING 2023-04-19 07:08:29,747 django.server Thread-1 (process_request_thread) 139744607385152 basehttp basehttp.py 187 django.server log_message 15673 "POST /api/contacts/ HTTP/1.1" 400 107
 INFO 2023-04-19 07:08:45,835 django.server Thread-1 (process_request_thread) 139744607385152 basehttp basehttp.py 187 django.server log_message 15673 "POST /api/contacts/ HTTP/1.1" 200 39
+INFO 2023-04-20 11:44:03,721 django MainThread 139979592110528 views views.py 20 django SignupView 13603 
+ Inside the SignupView API of accounts APP. Here we are creating an account of a user. JWT token not needed. 
+INFO 2023-04-20 11:44:03,723 django MainThread 139979592110528 views views.py 16 django RealtorListView 13603 
+ Inside the RealtorListView API of realtor App. Here we are getting all the realtors from DB..
+INFO 2023-04-20 11:44:03,723 django MainThread 139979592110528 views views.py 24 django RealtorView 13603 
+ Inside the RealtorView API of realtor App. Here we are a particular realtors from DB based on its PK..
+INFO 2023-04-20 11:44:03,724 django MainThread 139979592110528 views views.py 30 django TopSellerView 13603 
+ Inside the TopSellerView API of realtor App. Here we are getting all the realtors who are topsellers..
+INFO 2023-04-20 11:44:03,726 django MainThread 139979592110528 views views.py 17 django ListingsView 13603 
+ Inside the ListingsView API of listings App. Here we are getting all the data filtered by list date and ispublished value..
+INFO 2023-04-20 11:44:03,727 django MainThread 139979592110528 views views.py 27 django ListingView 13603 
+ inside the ListingView API of listings App. Here we are getting the info of a particular View using id and JWT token is madatory here..
+INFO 2023-04-20 11:44:03,727 django MainThread 139979592110528 views views.py 35 django SearchView 13603 
+ Inside the SearchView API of listings App. Here we are getting the search field values from the frontend Form and using it to retrieve data from the backend. This is done in the home page itself.
+INFO 2023-04-20 11:45:02,940 django MainThread 139828576477632 views views.py 20 django SignupView 13742 
+ Inside the SignupView API of accounts APP. Here we are creating an account of a user. JWT token not needed. 
+INFO 2023-04-20 11:45:02,942 django MainThread 139828576477632 views views.py 16 django RealtorListView 13742 
+ Inside the RealtorListView API of realtor App. Here we are getting all the realtors from DB..
+INFO 2023-04-20 11:45:02,942 django MainThread 139828576477632 views views.py 24 django RealtorView 13742 
+ Inside the RealtorView API of realtor App. Here we are a particular realtors from DB based on its PK..
+INFO 2023-04-20 11:45:02,942 django MainThread 139828576477632 views views.py 30 django TopSellerView 13742 
+ Inside the TopSellerView API of realtor App. Here we are getting all the realtors who are topsellers..
+INFO 2023-04-20 11:45:02,944 django MainThread 139828576477632 views views.py 17 django ListingsView 13742 
+ Inside the ListingsView API of listings App. Here we are getting all the data filtered by list date and ispublished value..
+INFO 2023-04-20 11:45:02,945 django MainThread 139828576477632 views views.py 27 django ListingView 13742 
+ inside the ListingView API of listings App. Here we are getting the info of a particular View using id and JWT token is madatory here..
+INFO 2023-04-20 11:45:02,946 django MainThread 139828576477632 views views.py 35 django SearchView 13742 
+ Inside the SearchView API of listings App. Here we are getting the search field values from the frontend Form and using it to retrieve data from the backend. This is done in the home page itself.
+INFO 2023-04-20 11:45:37,787 django MainThread 140690866131392 views views.py 20 django SignupView 13915 
+ Inside the SignupView API of accounts APP. Here we are creating an account of a user. JWT token not needed. 
+INFO 2023-04-20 11:45:37,788 django MainThread 140690866131392 views views.py 16 django RealtorListView 13915 
+ Inside the RealtorListView API of realtor App. Here we are getting all the realtors from DB..
+INFO 2023-04-20 11:45:37,789 django MainThread 140690866131392 views views.py 24 django RealtorView 13915 
+ Inside the RealtorView API of realtor App. Here we are a particular realtors from DB based on its PK..
+INFO 2023-04-20 11:45:37,789 django MainThread 140690866131392 views views.py 30 django TopSellerView 13915 
+ Inside the TopSellerView API of realtor App. Here we are getting all the realtors who are topsellers..
+INFO 2023-04-20 11:45:37,791 django MainThread 140690866131392 views views.py 17 django ListingsView 13915 
+ Inside the ListingsView API of listings App. Here we are getting all the data filtered by list date and ispublished value..
+INFO 2023-04-20 11:45:37,792 django MainThread 140690866131392 views views.py 27 django ListingView 13915 
+ inside the ListingView API of listings App. Here we are getting the info of a particular View using id and JWT token is madatory here..
+INFO 2023-04-20 11:45:37,792 django MainThread 140690866131392 views views.py 35 django SearchView 13915 
+ Inside the SearchView API of listings App. Here we are getting the search field values from the frontend Form and using it to retrieve data from the backend. This is done in the home page itself.
+INFO 2023-04-20 11:45:42,914 django MainThread 140475947512256 views views.py 20 django SignupView 13939 
+ Inside the SignupView API of accounts APP. Here we are creating an account of a user. JWT token not needed. 
+INFO 2023-04-20 11:45:42,915 django MainThread 140475947512256 views views.py 16 django RealtorListView 13939 
+ Inside the RealtorListView API of realtor App. Here we are getting all the realtors from DB..
+INFO 2023-04-20 11:45:42,916 django MainThread 140475947512256 views views.py 24 django RealtorView 13939 
+ Inside the RealtorView API of realtor App. Here we are a particular realtors from DB based on its PK..
+INFO 2023-04-20 11:45:42,916 django MainThread 140475947512256 views views.py 30 django TopSellerView 13939 
+ Inside the TopSellerView API of realtor App. Here we are getting all the realtors who are topsellers..
+INFO 2023-04-20 11:45:42,918 django MainThread 140475947512256 views views.py 17 django ListingsView 13939 
+ Inside the ListingsView API of listings App. Here we are getting all the data filtered by list date and ispublished value..
+INFO 2023-04-20 11:45:42,919 django MainThread 140475947512256 views views.py 27 django ListingView 13939 
+ inside the ListingView API of listings App. Here we are getting the info of a particular View using id and JWT token is madatory here..
+INFO 2023-04-20 11:45:42,920 django MainThread 140475947512256 views views.py 35 django SearchView 13939 
+ Inside the SearchView API of listings App. Here we are getting the search field values from the frontend Form and using it to retrieve data from the backend. This is done in the home page itself.
