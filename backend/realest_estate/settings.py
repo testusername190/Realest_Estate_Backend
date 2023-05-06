@@ -83,13 +83,21 @@ WSGI_APPLICATION = 'realest_estate.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'realest_estate',
+    #     'HOST': 'mydb',		# '127.0.0.1', Change this to the MYSQL service of the Docker Compose i.e. 'mydb' and execute the file.
+    #     'PORT': '3306',
+    #     'USER': 'root',
+    #     'PASSWORD': 'subham123',
+    # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'realest_estate',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': 'subham123',
+        'NAME': os.environ.get('DB_NAME'),
+        'HOST': os.environ.get('DB_HOST'),	
+        'PORT': os.environ.get('DB_PORT'),        
+        'USER': os.environ.get('DB_USER'),       
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
     }
 }
 

@@ -32,7 +32,8 @@ COPY ./backend $DockerHOME
 RUN pip3 install --no-cache-dir django djangorestframework django-cors-headers djangorestframework-simplejwt Pillow 
 
 # we create a new wait.sh file who makes our django app wait for the db to startup.
-COPY wait.sh /wait.sh
-RUN chmod +x /wait.sh
+
+COPY ./backend/wait.sh $DockerHOME/wait.sh
+RUN chmod +x $DockerHOME/wait.sh
 
 

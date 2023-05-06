@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  realest_estate_backend:
+    image: sbrc1996/realest_estate
+    container_name: realest_estate_backend
+    environment:
+      - DB_HOST=172.16.128.119
+      - DB_PORT=30000
+      - DB_NAME=realest_estate
+      - DB_USER=root
+      - DB_PASSWORD=root
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mydb
+    entrypoint: ["./wait.sh"]
+
+  mydb:
+    image: mysql:8.0.21
+    ports:
+      - "30000:3306"
+    environment:
+      #These environment variables are to be not included in the Settings.py file of Django.
+      MYSQL_ROOT_PASSWORD: root     
+      MYSQL_DATABASE: realest_estate
+    # This will create the database realest_estate here if it not exists.
+    volumes:
+      - mydb_data:/var/lib/mysql
+
+# Creating a volume named mydb_data and store the data of the MYSQL running in the container by doing the mapping.
+volumes:
+  mydb_data:

@@ -1151,3 +1151,188 @@ INFO 2023-04-20 11:45:42,919 django MainThread 140475947512256 views views.py 27
  inside the ListingView API of listings App. Here we are getting the info of a particular View using id and JWT token is madatory here..
 INFO 2023-04-20 11:45:42,920 django MainThread 140475947512256 views views.py 35 django SearchView 13939 
  Inside the SearchView API of listings App. Here we are getting the search field values from the frontend Form and using it to retrieve data from the backend. This is done in the home page itself.
+INFO 2023-04-26 12:55:26,323 django.utils.autoreload MainThread 139873435795904 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 29268 Watching for file changes with StatReloader
+INFO 2023-04-26 12:55:27,026 django django-main-thread 139873393571392 views views.py 20 django SignupView 29268 
+ Inside the SignupView API of accounts APP. Here we are creating an account of a user. JWT token not needed. 
+INFO 2023-04-26 12:55:27,027 django django-main-thread 139873393571392 views views.py 16 django RealtorListView 29268 
+ Inside the RealtorListView API of realtor App. Here we are getting all the realtors from DB..
+INFO 2023-04-26 12:55:27,028 django django-main-thread 139873393571392 views views.py 24 django RealtorView 29268 
+ Inside the RealtorView API of realtor App. Here we are a particular realtors from DB based on its PK..
+INFO 2023-04-26 12:55:27,028 django django-main-thread 139873393571392 views views.py 30 django TopSellerView 29268 
+ Inside the TopSellerView API of realtor App. Here we are getting all the realtors who are topsellers..
+INFO 2023-04-26 12:55:27,030 django django-main-thread 139873393571392 views views.py 17 django ListingsView 29268 
+ Inside the ListingsView API of listings App. Here we are getting all the data filtered by list date and ispublished value..
+INFO 2023-04-26 12:55:27,031 django django-main-thread 139873393571392 views views.py 27 django ListingView 29268 
+ inside the ListingView API of listings App. Here we are getting the info of a particular View using id and JWT token is madatory here..
+INFO 2023-04-26 12:55:27,031 django django-main-thread 139873393571392 views views.py 35 django SearchView 29268 
+ Inside the SearchView API of listings App. Here we are getting the search field values from the frontend Form and using it to retrieve data from the backend. This is done in the home page itself.
+ERROR 2023-04-26 12:55:37,703 django.request Thread-1 (process_request_thread) 139873368729152 log log.py 241 django.request log_response 29268 Internal Server Error: /admin
+Traceback (most recent call last):
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2023-04-26 12:55:37,709 django.server Thread-1 (process_request_thread) 139873368729152 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin HTTP/1.1" 500 88853
+INFO 2023-04-26 12:55:41,253 django.server Thread-1 (process_request_thread) 139873368729152 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-04-26 12:55:41,298 django.server Thread-1 (process_request_thread) 139873368729152 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2215
+INFO 2023-04-26 12:55:41,419 django.server Thread-3 (process_request_thread) 139873350895168 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2619
+INFO 2023-04-26 12:55:41,422 django.server Thread-2 (process_request_thread) 139873359287872 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 796
+INFO 2023-04-26 12:55:41,424 django.server Thread-5 (process_request_thread) 139872991966784 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/css/responsive.css HTTP/1.1" 200 18854
+INFO 2023-04-26 12:55:41,426 django.server Thread-1 (process_request_thread) 139873368729152 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/css/base.css HTTP/1.1" 200 20344
+INFO 2023-04-26 12:55:41,431 django.server Thread-4 (process_request_thread) 139873342502464 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2023-04-26 12:55:41,509 django.server Thread-4 (process_request_thread) 139873342502464 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3763
+INFO 2023-04-26 12:55:41,518 django.server Thread-4 (process_request_thread) 139873342502464 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2023-04-26 12:55:41,615 django.server Thread-5 (process_request_thread) 139872991966784 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO 2023-04-26 12:55:41,617 django.server Thread-4 (process_request_thread) 139873342502464 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO 2023-04-26 12:56:07,781 django.server Thread-4 (process_request_thread) 139873342502464 basehttp basehttp.py 187 django.server log_message 29268 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2383
+INFO 2023-04-26 12:56:07,921 django.server Thread-4 (process_request_thread) 139873342502464 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO 2023-04-26 12:56:21,582 django.server Thread-4 (process_request_thread) 139873342502464 basehttp basehttp.py 187 django.server log_message 29268 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2383
+INFO 2023-04-26 12:57:42,332 django.server Thread-4 (process_request_thread) 139873342502464 basehttp basehttp.py 187 django.server log_message 29268 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2023-04-26 12:57:42,387 django.server Thread-4 (process_request_thread) 139873342502464 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/ HTTP/1.1" 200 5830
+INFO 2023-04-26 12:57:42,486 django.server Thread-4 (process_request_thread) 139873342502464 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+INFO 2023-04-26 12:57:42,616 django.server Thread-4 (process_request_thread) 139873342502464 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2023-04-26 12:57:42,617 django.server Thread-5 (process_request_thread) 139872991966784 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2023-04-26 12:57:47,830 django.server Thread-5 (process_request_thread) 139872991966784 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/auth/group/ HTTP/1.1" 200 6525
+INFO 2023-04-26 12:57:47,878 django.server Thread-5 (process_request_thread) 139872991966784 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6395
+INFO 2023-04-26 12:57:47,894 django.server Thread-3 (process_request_thread) 139873350895168 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+INFO 2023-04-26 12:57:47,902 django.server Thread-1 (process_request_thread) 139873368729152 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 288580
+INFO 2023-04-26 12:57:47,903 django.server Thread-2 (process_request_thread) 139873359287872 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2023-04-26 12:57:47,904 django.server Thread-5 (process_request_thread) 139872991966784 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2023-04-26 12:57:47,907 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8985
+INFO 2023-04-26 12:57:47,919 django.server Thread-3 (process_request_thread) 139873350895168 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2023-04-26 12:57:47,920 django.server Thread-2 (process_request_thread) 139873359287872 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+INFO 2023-04-26 12:57:47,929 django.server Thread-4 (process_request_thread) 139873342502464 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-04-26 12:57:47,932 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2023-04-26 12:57:48,025 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/js/filters.js HTTP/1.1" 200 966
+INFO 2023-04-26 12:57:48,037 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2023-04-26 12:57:48,093 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2023-04-26 12:57:56,644 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/ HTTP/1.1" 200 5830
+INFO 2023-04-26 12:58:04,373 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/auth/group/ HTTP/1.1" 200 6525
+INFO 2023-04-26 12:58:04,450 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2023-04-26 12:58:06,523 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/auth/group/ HTTP/1.1" 200 6525
+INFO 2023-04-26 12:58:06,591 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+ERROR 2023-04-26 12:58:14,450 django.request Thread-6 (process_request_thread) 139872983574080 log log.py 241 django.request log_response 29268 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2023-04-26 12:58:14,451 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET / HTTP/1.1" 500 89572
+INFO 2023-04-26 12:58:17,521 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/auth/group/ HTTP/1.1" 200 6525
+INFO 2023-04-26 12:58:19,586 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/ HTTP/1.1" 200 5830
+INFO 2023-04-26 13:00:05,899 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/login/ HTTP/1.1" 302 0
+INFO 2023-04-26 13:00:05,943 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/ HTTP/1.1" 200 5830
+INFO 2023-04-26 13:00:08,246 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "POST /admin/logout/ HTTP/1.1" 200 1549
+INFO 2023-04-26 13:00:10,055 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-04-26 13:00:10,067 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2215
+INFO 2023-04-26 13:00:13,531 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin/login/ HTTP/1.1" 200 2202
+INFO 2023-04-26 13:01:30,256 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "POST /admin/login/ HTTP/1.1" 200 2370
+INFO 2023-04-26 13:17:34,063 django MainThread 140413382255040 views views.py 20 django SignupView 31941 
+ Inside the SignupView API of accounts APP. Here we are creating an account of a user. JWT token not needed. 
+INFO 2023-04-26 13:17:34,064 django MainThread 140413382255040 views views.py 16 django RealtorListView 31941 
+ Inside the RealtorListView API of realtor App. Here we are getting all the realtors from DB..
+INFO 2023-04-26 13:17:34,064 django MainThread 140413382255040 views views.py 24 django RealtorView 31941 
+ Inside the RealtorView API of realtor App. Here we are a particular realtors from DB based on its PK..
+INFO 2023-04-26 13:17:34,065 django MainThread 140413382255040 views views.py 30 django TopSellerView 31941 
+ Inside the TopSellerView API of realtor App. Here we are getting all the realtors who are topsellers..
+INFO 2023-04-26 13:17:34,067 django MainThread 140413382255040 views views.py 17 django ListingsView 31941 
+ Inside the ListingsView API of listings App. Here we are getting all the data filtered by list date and ispublished value..
+INFO 2023-04-26 13:17:34,067 django MainThread 140413382255040 views views.py 27 django ListingView 31941 
+ inside the ListingView API of listings App. Here we are getting the info of a particular View using id and JWT token is madatory here..
+INFO 2023-04-26 13:17:34,068 django MainThread 140413382255040 views views.py 35 django SearchView 31941 
+ Inside the SearchView API of listings App. Here we are getting the search field values from the frontend Form and using it to retrieve data from the backend. This is done in the home page itself.
+INFO 2023-04-26 13:20:58,118 django.utils.autoreload MainThread 140595801559488 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 32456 Watching for file changes with StatReloader
+INFO 2023-04-26 13:20:58,648 django MainThread 140595801559488 views views.py 20 django SignupView 32456 
+ Inside the SignupView API of accounts APP. Here we are creating an account of a user. JWT token not needed. 
+INFO 2023-04-26 13:20:58,650 django MainThread 140595801559488 views views.py 16 django RealtorListView 32456 
+ Inside the RealtorListView API of realtor App. Here we are getting all the realtors from DB..
+INFO 2023-04-26 13:20:58,651 django MainThread 140595801559488 views views.py 24 django RealtorView 32456 
+ Inside the RealtorView API of realtor App. Here we are a particular realtors from DB based on its PK..
+INFO 2023-04-26 13:20:58,652 django MainThread 140595801559488 views views.py 30 django TopSellerView 32456 
+ Inside the TopSellerView API of realtor App. Here we are getting all the realtors who are topsellers..
+INFO 2023-04-26 13:20:58,657 django MainThread 140595801559488 views views.py 17 django ListingsView 32456 
+ Inside the ListingsView API of listings App. Here we are getting all the data filtered by list date and ispublished value..
+INFO 2023-04-26 13:20:58,658 django MainThread 140595801559488 views views.py 27 django ListingView 32456 
+ inside the ListingView API of listings App. Here we are getting the info of a particular View using id and JWT token is madatory here..
+INFO 2023-04-26 13:20:58,659 django MainThread 140595801559488 views views.py 35 django SearchView 32456 
+ Inside the SearchView API of listings App. Here we are getting the search field values from the frontend Form and using it to retrieve data from the backend. This is done in the home page itself.
+ERROR 2023-04-26 13:21:04,848 django.request Thread-1 (process_request_thread) 140595734472256 log log.py 241 django.request log_response 32456 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2023-04-26 13:21:04,850 django.server Thread-1 (process_request_thread) 140595734472256 basehttp basehttp.py 187 django.server log_message 32456 "GET / HTTP/1.1" 500 89182
+INFO 2023-04-26 13:21:12,239 django.server Thread-1 (process_request_thread) 140595734472256 basehttp basehttp.py 187 django.server log_message 32456 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-04-26 13:21:12,275 django.server Thread-1 (process_request_thread) 140595734472256 basehttp basehttp.py 187 django.server log_message 32456 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2215
+INFO 2023-04-26 13:21:16,421 django.server Thread-1 (process_request_thread) 140595734472256 basehttp basehttp.py 187 django.server log_message 32456 "GET /admin/login/ HTTP/1.1" 200 2202
+INFO 2023-04-26 13:21:39,931 django.server Thread-1 (process_request_thread) 140595734472256 basehttp basehttp.py 187 django.server log_message 32456 "POST /admin/login/ HTTP/1.1" 302 0
+INFO 2023-04-26 13:21:39,977 django.server Thread-1 (process_request_thread) 140595734472256 basehttp basehttp.py 187 django.server log_message 32456 "GET /admin/ HTTP/1.1" 200 5187
+INFO 2023-04-26 13:36:09,787 django MainThread 140229488574912 views views.py 20 django SignupView 33405 
+ Inside the SignupView API of accounts APP. Here we are creating an account of a user. JWT token not needed. 
+INFO 2023-04-26 13:36:09,789 django MainThread 140229488574912 views views.py 16 django RealtorListView 33405 
+ Inside the RealtorListView API of realtor App. Here we are getting all the realtors from DB..
+INFO 2023-04-26 13:36:09,789 django MainThread 140229488574912 views views.py 24 django RealtorView 33405 
+ Inside the RealtorView API of realtor App. Here we are a particular realtors from DB based on its PK..
+INFO 2023-04-26 13:36:09,789 django MainThread 140229488574912 views views.py 30 django TopSellerView 33405 
+ Inside the TopSellerView API of realtor App. Here we are getting all the realtors who are topsellers..
+INFO 2023-04-26 13:36:09,791 django MainThread 140229488574912 views views.py 17 django ListingsView 33405 
+ Inside the ListingsView API of listings App. Here we are getting all the data filtered by list date and ispublished value..
+INFO 2023-04-26 13:36:09,792 django MainThread 140229488574912 views views.py 27 django ListingView 33405 
+ inside the ListingView API of listings App. Here we are getting the info of a particular View using id and JWT token is madatory here..
+INFO 2023-04-26 13:36:09,792 django MainThread 140229488574912 views views.py 35 django SearchView 33405 
+ Inside the SearchView API of listings App. Here we are getting the search field values from the frontend Form and using it to retrieve data from the backend. This is done in the home page itself.
+INFO 2023-04-26 13:36:38,528 django.utils.autoreload MainThread 140024089440704 autoreload autoreload.py 677 django.utils.autoreload run_with_reloader 33474 Watching for file changes with StatReloader
+INFO 2023-04-26 13:36:38,982 django MainThread 140024089440704 views views.py 20 django SignupView 33474 
+ Inside the SignupView API of accounts APP. Here we are creating an account of a user. JWT token not needed. 
+INFO 2023-04-26 13:36:38,983 django MainThread 140024089440704 views views.py 16 django RealtorListView 33474 
+ Inside the RealtorListView API of realtor App. Here we are getting all the realtors from DB..
+INFO 2023-04-26 13:36:38,983 django MainThread 140024089440704 views views.py 24 django RealtorView 33474 
+ Inside the RealtorView API of realtor App. Here we are a particular realtors from DB based on its PK..
+INFO 2023-04-26 13:36:38,983 django MainThread 140024089440704 views views.py 30 django TopSellerView 33474 
+ Inside the TopSellerView API of realtor App. Here we are getting all the realtors who are topsellers..
+INFO 2023-04-26 13:36:38,985 django MainThread 140024089440704 views views.py 17 django ListingsView 33474 
+ Inside the ListingsView API of listings App. Here we are getting all the data filtered by list date and ispublished value..
+INFO 2023-04-26 13:36:38,986 django MainThread 140024089440704 views views.py 27 django ListingView 33474 
+ inside the ListingView API of listings App. Here we are getting the info of a particular View using id and JWT token is madatory here..
+INFO 2023-04-26 13:36:38,986 django MainThread 140024089440704 views views.py 35 django SearchView 33474 
+ Inside the SearchView API of listings App. Here we are getting the search field values from the frontend Form and using it to retrieve data from the backend. This is done in the home page itself.
+INFO 2023-04-26 13:36:48,199 django.server Thread-1 (process_request_thread) 140024022345280 basehttp basehttp.py 187 django.server log_message 33474 "GET /admin/ HTTP/1.1" 200 5187
+INFO 2023-04-26 13:36:50,031 django.server Thread-1 (process_request_thread) 140024022345280 basehttp basehttp.py 187 django.server log_message 33474 "POST /admin/logout/ HTTP/1.1" 200 1549
+INFO 2023-04-26 13:36:51,799 django.server Thread-1 (process_request_thread) 140024022345280 basehttp basehttp.py 187 django.server log_message 33474 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-04-26 13:36:51,842 django.server Thread-1 (process_request_thread) 140024022345280 basehttp basehttp.py 187 django.server log_message 33474 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2215
+INFO 2023-04-26 13:37:18,865 django.server Thread-1 (process_request_thread) 140024022345280 basehttp basehttp.py 187 django.server log_message 33474 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2023-04-26 13:37:18,906 django.server Thread-1 (process_request_thread) 140024022345280 basehttp basehttp.py 187 django.server log_message 33474 "GET /admin/ HTTP/1.1" 200 5177
+INFO 2023-04-26 13:37:28,424 django.server Thread-1 (process_request_thread) 140024022345280 basehttp basehttp.py 187 django.server log_message 33474 "POST /admin/logout/ HTTP/1.1" 200 1549
+INFO 2023-04-26 13:39:50,005 django.server Thread-1 (process_request_thread) 140024022345280 basehttp basehttp.py 187 django.server log_message 33474 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-04-26 13:39:50,020 django.server Thread-1 (process_request_thread) 140024022345280 basehttp basehttp.py 187 django.server log_message 33474 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2215
+INFO 2023-04-26 13:39:59,054 django.server Thread-1 (process_request_thread) 140024022345280 basehttp basehttp.py 187 django.server log_message 33474 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2023-04-26 13:39:59,094 django.server Thread-1 (process_request_thread) 140024022345280 basehttp basehttp.py 187 django.server log_message 33474 "GET /admin/ HTTP/1.1" 200 5830
+INFO 2023-04-26 13:40:02,767 django.server Thread-1 (process_request_thread) 140024022345280 basehttp basehttp.py 187 django.server log_message 33474 "POST /admin/logout/ HTTP/1.1" 200 1549

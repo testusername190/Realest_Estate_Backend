@@ -4,4 +4,19 @@ email: subham@gmail.com
 Name : subham
 Password: 123 
 
-Login Using Email and Password
+Login Using Email and Password 
+
+email: xyz
+name:  xyz@example.com
+password: password123
+
+email : abcd@example.com
+name : admin 
+password : password123
+
+commands to create a superuser using the terminal directly: 
+DJANGO_SUPERUSER_USERNAME=abcd DJANGO_SUPERUSER_EMAIL=abcd@example.com DJANGO_SUPERUSER_PASSWORD=password123 python3 manage.py createsuperuser --noinput --name admin
+(best way to create a superuser using the terminal directly)
+
+echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('xyz', 'xyz@example.com', 'password123')" | python3 manage.py shell
+(In this approach the name and email might get jumbled up.)

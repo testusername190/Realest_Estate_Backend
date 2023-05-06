@@ -191,3 +191,51 @@ WARNING 2023-04-19 07:08:16,345 django.request Thread-1 (process_request_thread)
 WARNING 2023-04-19 07:08:16,348 django.server Thread-1 (process_request_thread) 139744607385152 basehttp basehttp.py 187 django.server log_message 15673 "POST /api/contacts/ HTTP/1.1" 400 83
 WARNING 2023-04-19 07:08:29,746 django.request Thread-1 (process_request_thread) 139744607385152 log log.py 241 django.request log_response 15673 Bad Request: /api/contacts/
 WARNING 2023-04-19 07:08:29,747 django.server Thread-1 (process_request_thread) 139744607385152 basehttp basehttp.py 187 django.server log_message 15673 "POST /api/contacts/ HTTP/1.1" 400 107
+ERROR 2023-04-26 12:55:37,703 django.request Thread-1 (process_request_thread) 139873368729152 log log.py 241 django.request log_response 29268 Internal Server Error: /admin
+Traceback (most recent call last):
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2023-04-26 12:55:37,709 django.server Thread-1 (process_request_thread) 139873368729152 basehttp basehttp.py 187 django.server log_message 29268 "GET /admin HTTP/1.1" 500 88853
+ERROR 2023-04-26 12:58:14,450 django.request Thread-6 (process_request_thread) 139872983574080 log log.py 241 django.request log_response 29268 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2023-04-26 12:58:14,451 django.server Thread-6 (process_request_thread) 139872983574080 basehttp basehttp.py 187 django.server log_message 29268 "GET / HTTP/1.1" 500 89572
+ERROR 2023-04-26 13:21:04,848 django.request Thread-1 (process_request_thread) 140595734472256 log log.py 241 django.request log_response 32456 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2023-04-26 13:21:04,850 django.server Thread-1 (process_request_thread) 140595734472256 basehttp basehttp.py 187 django.server log_message 32456 "GET / HTTP/1.1" 500 89182
