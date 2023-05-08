@@ -4,9 +4,9 @@
   tasks:
     - name: copy docker-compose file
       copy:
-        src: ./docker_compose_spe.yml
+        src: ./docker_compose_spe.yaml
         dest: ./
     - name:  docker-compose down
-      command: docker-compose -f docker_compose_spe.yml down
+      command: docker-compose -f docker_compose_spe.yaml down
     - name: run docker-compose file
-      command: docker-compose -f docker_compose_spe.yml up -d
+      command: docker-compose -f docker_compose_spe.yaml up -d
