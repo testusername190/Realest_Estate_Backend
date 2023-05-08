@@ -239,3 +239,85 @@ Traceback (most recent call last):
     raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
 django.template.exceptions.TemplateDoesNotExist: index.html
 ERROR 2023-04-26 13:21:04,850 django.server Thread-1 (process_request_thread) 140595734472256 basehttp basehttp.py 187 django.server log_message 32456 "GET / HTTP/1.1" 500 89182
+ERROR 2023-05-07 18:32:53,643 django.request Thread-1 (process_request_thread) 139691373778496 log log.py 241 django.request log_response 19296 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2023-05-07 18:32:53,645 django.server Thread-1 (process_request_thread) 139691373778496 basehttp basehttp.py 187 django.server log_message 19296 "GET / HTTP/1.1" 500 86082
+ERROR 2023-05-07 18:32:53,852 django.request Thread-1 (process_request_thread) 139691373778496 log log.py 241 django.request log_response 19296 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2023-05-07 18:32:53,853 django.server Thread-1 (process_request_thread) 139691373778496 basehttp basehttp.py 187 django.server log_message 19296 "GET /favicon.ico HTTP/1.1" 500 86024
+ERROR 2023-05-07 18:32:58,948 django.request Thread-1 (process_request_thread) 139691373778496 log log.py 241 django.request log_response 19296 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2023-05-07 18:32:58,948 django.server Thread-1 (process_request_thread) 139691373778496 basehttp basehttp.py 187 django.server log_message 19296 "GET /favicon.ico HTTP/1.1" 500 86049
+ERROR 2023-05-07 18:34:07,809 django.request Thread-1 (process_request_thread) 140711262238272 log log.py 241 django.request log_response 19695 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2023-05-07 18:34:07,810 django.server Thread-1 (process_request_thread) 140711262238272 basehttp basehttp.py 187 django.server log_message 19695 "GET /favicon.ico HTTP/1.1" 500 86049
+WARNING 2023-05-07 18:34:18,937 django.request Thread-1 (process_request_thread) 140711262238272 log log.py 241 django.request log_response 19695 Method Not Allowed: /api/contacts/
+WARNING 2023-05-07 18:34:18,938 django.server Thread-1 (process_request_thread) 140711262238272 basehttp basehttp.py 187 django.server log_message 19695 "GET /api/contacts/ HTTP/1.1" 405 10529
+ERROR 2023-05-07 18:34:19,101 django.request Thread-4 (process_request_thread) 140711164892736 log log.py 241 django.request log_response 19695 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/subham/.local/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+ERROR 2023-05-07 18:34:19,101 django.server Thread-4 (process_request_thread) 140711164892736 basehttp basehttp.py 187 django.server log_message 19695 "GET /favicon.ico HTTP/1.1" 500 86037

@@ -1,0 +1,12 @@
+---
+- name: copy docker-compose file
+  hosts: all
+  tasks:
+    - name: copy docker-compose file
+      copy:
+        src: ./docker_compose_spe.yml
+        dest: ./
+    - name:  docker-compose down
+      command: docker-compose -f docker_compose_spe.yml down
+    - name: run docker-compose file
+      command: docker-compose -f docker_compose_spe.yml up -d
