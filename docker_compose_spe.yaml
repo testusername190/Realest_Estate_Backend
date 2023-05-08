@@ -15,6 +15,8 @@ services:
     depends_on:
       - mydb
     entrypoint: ["./wait.sh"]
+    volumes:
+      - realest_estate_logs:/app/logs
 
   mydb:
     image: mysql:8.0.21
@@ -28,6 +30,7 @@ services:
     volumes:
       - mydb_data:/var/lib/mysql
 
-# Creating a volume named mydb_data and store the data of the MYSQL running in the container by doing the mapping.
+
 volumes:
-  mydb_data:
+  mydb_data:              # Creating a volume named mydb_data and store the data of the MYSQL running in the container by doing the mapping.
+  realest_estate_logs:    # Creating a volume to store the logs persistently
