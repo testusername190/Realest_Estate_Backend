@@ -16,7 +16,7 @@ services:
       - mydb
     entrypoint: ["./wait.sh"]
     volumes:
-      - realest_estate_logs:/app/logs
+      - realest_estate_logs:/app/logs     # Persistent Log storing
 
   mydb:
     image: mysql:8.0.21
@@ -29,6 +29,15 @@ services:
     # This will create the database realest_estate here if it not exists.
     volumes:
       - mydb_data:/var/lib/mysql
+  
+  realest_estate_frontend:
+    image: vishalsin25/spe-major-front
+    container_name: realest_estate_frontend
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    depends_on:
+      - realest_estate_backend
 
 
 volumes:
