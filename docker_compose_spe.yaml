@@ -16,7 +16,8 @@ services:
       - mydb
     entrypoint: ["./wait.sh"]
     volumes:
-      - realest_estate_logs:/app/logs     # Persistent Log storing
+      - realest_estate_logs:/app/logs     # Persistent Log storing.
+      - realest_estate_media:/app/media   # Persistent Media storage.
 
   mydb:
     image: mysql:8.0.21
@@ -42,4 +43,5 @@ services:
 
 volumes:
   mydb_data:              # Creating a volume named mydb_data and store the data of the MYSQL running in the container by doing the mapping.
-  realest_estate_logs:    # Creating a volume to store the logs persistently
+  realest_estate_logs:    # Creating a volume to store the logs persistently.
+  realest_estate_media:   # Creating a volume to store the photos and other media files persistently.
