@@ -34,7 +34,7 @@ services:
   realest_estate_frontend:
     image: vishalsin25/spe-major-front
     container_name: realest_estate_frontend
-    stdin_open: true
+    stdin_open: true               # To prevent the container from exiting abruptly.
     ports:
       - "3000:3000"
     depends_on:
