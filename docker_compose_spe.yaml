@@ -36,7 +36,7 @@ services:
     container_name: realest_estate_frontend
     stdin_open: true               # To prevent the container from exiting abruptly.
     ports:
-      - "3000:3000"
+      - "3005:3000"
     depends_on:
       - realest_estate_backend
 
